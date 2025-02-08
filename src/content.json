@@ -31,152 +31,107 @@
       "enable_section": true,
       "title": "Skills"
     },
-    "skills_caption": "Some technologies I've been worked with:",
-    "skills": [
-      "JavaScript ES6+",
-      "React.js & Node.js",
-      "Python 3.x",
-      "HTML & CSS",
-      "MongoDB & MySQL",
-      "Linux & Windows OS"
+    "skills_caption": " I have 7 years of experience in web application development. Over this time, I've worked as a Senior Front-End Developer, Senior Back-End Developer, and currently, I'm a Full-Stack Developer at Juego Studios. Throughout my career, I've worked with a wide range of web technologies. Here are some of the technologies I specialize in.",
+    "skills_items": [
+      {
+        "skills_category": "Languages",
+        "skills_detail": "Java, Python, JavaScript, TypeScript"
+      },
+      {
+        "skills_category": "Development kits",
+        "skills_detail": "IntelliJ, Eclipse, Netbeans, Visual Studio Code, Sublime Text, Ant, Maven, Postman"
+      },
+      {
+        "skills_category": "Data access",
+        "skills_detail": "MySQL, Postgres, JPA, MongoDB, Oracle, AWS DynamoDB, Ignite"
+      },
+      {
+        "skills_category": "Clouding",
+        "skills_detail": "AWS(Amplify, Lambda, EC2, SQS, SNS, S3), Google(GCP, GKE), Azure"
+      },
+      {
+        "skills_category": "Message Broker & Queue",
+        "skills_detail": "Apache Kafka, RabbitMQ, CloudAMQP, Amazon MQ"
+      },
+      {
+        "skills_category": "Frontend",
+        "skills_detail": "Angular, NgRx, React, Redux, Tailwind CSS, Bootstrap, HTML, SCSS"
+      },
+      {
+        "skills_category": "Backend",
+        "skills_detail": "Node.js, Express.js, Spring Boot, Kotlin, Django"
+      },
+      {
+        "skills_category": "Testing",
+        "skills_detail": "JUnit, JMeter, Selenium"
+      },
+      {
+        "skills_category": "Approach",
+        "skills_detail": "Agile, EDD, TDD, Camunda BPMN, Bizflow, OOP, Design Patterns, SCRUM"
+      },
+      {
+        "skills_category": "DevOps & CI/CD",
+        "skills_detail": "Azure DevOps, Docker, GitHub Actions, Jenkins, Vercel"
+      },
+      {
+        "skills_category": "Version control",
+        "skills_detail": "GitHub, GitLab, Bitbucket, Subversion(SVN)"
+      },
+      {
+        "skills_category": "Source management",
+        "skills_detail": "Jira, Azure DevOps, Trello, Asana"
+      }
     ]
   },
   "academics": {
     "section": {
       "enable_section": true,
-      "title": "Education",
-      "description": "Courses that I have completed."
+      "title": "Education"
     },
     "general": {
       "school": "Hong Kong University",
       "degree": "Bachelor of Science in Computer Science",
-      "start_year": 2021,
-      "end_year": 2025
+      "start_date": "Sep 2017",
+      "end_date": "Aug 2020",
+      "description": [
+        "During my time at Hong Kong University (September 2017 – August 2020), I honed my skills in computer science, focusing on software development, algorithms, and data structures.",
+        "I actively participated in collaborative projects, including developing a mobile app for campus event management, which deepened my understanding of user-centric design and agile development.",
+        "My coursework included advanced topics like artificial intelligence, cloud computing, and database management, providing a strong foundation for my future career in software engineering.",
+        "I received the Bachelor of Science in Computer Science award upon graduation, recognizing my academic excellence and commitment to the field.",
+        "Beyond academics, I took part in coding competitions and hackathons, where I gained hands-on experience solving real-world challenges and working under tight deadlines."
+      ]
+    }
+  },
+  "certification": {
+    "section": {
+      "enable_section": true,
+      "title": "Certification"
     },
-    "years": [
+    "certication_items": [
       {
-        "year": 2021,
-        "semester": "Fall",
-        "courses": [
-          {
-            "abbreviation": "CS 1310",
-            "name": "C Programming I",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "MT 1411",
-            "name": "Pre Calculus",
-            "credits": 4.0
-          },
-          {
-            "abbreviation": "EN 1311",
-            "name": "Rhetoric and Composition",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "PL 1301",
-            "name": "Introduction to Philosophy",
-            "credits": 3.0
-          }
-        ]
+        "title": "Full-Stack Engineer Certification",
+        "date": "October 2024",
+        "image": "../assets/certification/full-stack.png"
       },
       {
-        "year": 2022,
-        "semester": "Spring",
-        "courses": [
-          {
-            "abbreviation": "CS102",
-            "name": "C Programming II",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "CS 3300",
-            "name": "Intro to Data Analytics Python Programming I",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "MT 2412",
-            "name": "Calculus I",
-            "credits": 4.0
-          },
-          {
-            "abbreviation": "FYE 1301",
-            "name": "First Year Seminar",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "MT 2412",
-            "name": "Multicultural American Lit",
-            "credits": 3.0
-          }
-        ]
+        "title": "AWS Certified DevOps Engineer",
+        "date": "Feburary 2024",
+        "image": "../assets/certification/AWS.png"
       },
       {
-        "year": 2022,
-        "semester": "Fall",
-        "courses": [
-          {
-            "abbreviation": "CS 2315",
-            "name": "Algorithms and Data Structure",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "CS 2313",
-            "name": "Object Oriented Programming I",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "CS 2110",
-            "name": "Sophomore CS Seminar",
-            "credits": 1.0
-          },
-          {
-            "abbreviation": "CM 1341",
-            "name": "Intro to Human Communication",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "AR 1300",
-            "name": "Concepts in Visual Arts",
-            "credits": 3.0
-          }
-        ]
+        "title": "PHP Certified Engineer Certification",
+        "date": "June 2022",
+        "image": "../assets/certification/PHP.png"
       },
       {
-        "year": 2023,
-        "semester": "Spring",
-        "courses": [
-          {
-            "abbreviation": "CS 2350",
-            "name": "Computer Architecture",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "CS 2323",
-            "name": "Object Oritented Programming II",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "CS 4375",
-            "name": "Advanced Topics (Python Data Analytics)",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "MT 2323",
-            "name": "Discrete Math Structures",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "TH 1301",
-            "name": "Introduction to Thelogy",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "AC 2301",
-            "name": "Financial Accounting",
-            "credits": 3.0
-          }
-        ]
+        "title": "Front-End developer Certification",
+        "date": "May 2024",
+        "image": "../assets/certification/Vue.png"
+      },
+      {
+        "title": "English Certification",
+        "date": "January 2023",
+        "image": "../assets/certification/English.png"
       }
     ]
   },
@@ -213,7 +168,7 @@
         ]
       },
       {
-        "organization": "Kuala Lumpur Kepong Berhad",
+        "organization": "KLK Berhad",
         "title": "Front-End developer Internship",
         "start_date": "Jun 2019",
         "end_date": " Oct 2020",

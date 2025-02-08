@@ -48,11 +48,7 @@ import ReactMarkdown from "react-markdown";
 const AboutMe = () => {
   const skills = Skilldata.skills;
 
-  const firstHalf = skills.skills.slice(0, skills.skills.length / 2);
-  const secondHalf = skills.skills.slice(skills.skills.length / 2);
-
   return (
-    <Fade triggerOnce={true}>
       <section id="skills">
         <div className="container">
           <div className="row">
@@ -62,42 +58,33 @@ const AboutMe = () => {
                 <h3 className="title-a">
                   {skills.section.title} 
                 </h3>
-                <p className="subtitle-a">{skills.section.description}</p>
-              </div>
-              <div>
-                <div className="col-md-6">
-                  <p className="about-me-desc">{skills.skills_caption}</p>
-                  <div className="languages-list">
-                    <ul>
-                      {firstHalf.map((skill, index) => (
-                        <Fade
-                          delay={index * 200}
-                          cascade={false}
-                          triggerOnce={true}
-                        >
-                          <li key={index}>{skill}</li>
-                        </Fade>
-                      ))}
-                    </ul>
-                    <ul>
-                      {secondHalf.map((skill, index) => (
-                        <Fade
-                          delay={index * 200}
-                          cascade={false}
-                          triggerOnce={true}
-                        >
-                          <li key={index}>{skill}</li>
-                        </Fade>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                <p className="subtitle-a">
+                  {skills.skills_caption}
+                </p>
               </div>
             </div>
           </div>
         </div>
+
+        <div className="col-sm-12">
+          <div className="wrapper">
+              <div className="content">
+                <Fade damping={0.1} triggerOnce={true}>
+                  <ul>
+                    {skills.skills_items.map(
+                      (paragraph, paraIndex) => (
+                        <li className="active" key={paraIndex}>
+                          <h5>{paragraph.skills_category}</h5>
+                          <p>{paragraph.skills_detail}</p>
+                        </li>
+                      )
+                    )}
+                  </ul>
+                </Fade>
+              </div>
+          </div>
+        </div>
       </section>
-    </Fade>
   );
 };
 

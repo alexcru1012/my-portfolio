@@ -48,9 +48,9 @@ import ReactMarkdown from "react-markdown";
 
 */
 
-const WorkExperience = () => {
-  const { experience } = contentData;
-  const experienceItems = experience.experience_items;
+const Certification = () => {
+  const { certification } = contentData;
+  const CertificationItems = certification.certication_items;
 
   const [activeJobIndex, setActiveJobIndex] = useState(0);
 
@@ -66,8 +66,8 @@ const WorkExperience = () => {
             <div className="col-sm-12">
               <div className="title-box text-center">
               <div className="line-mf" />
-                <h3 className="title-a" id="experience">
-                  {experience.section.title}
+                <h3 className="title-a" id="certification">
+                  {certification.section.title}
                 </h3>
               </div>
             </div>
@@ -75,40 +75,30 @@ const WorkExperience = () => {
 
           <div className="col-sm-12">
             <div className="wrapper">
-              <Fade triggerOnce={true} className="col-sm-4">
+              <Fade triggerOnce={true}>
                 <ul className="indicator">
-                  {experienceItems.map((job, index) => (
+                  {CertificationItems.map((job, index) => (
                     <li
                       key={index}
                       className={index === activeJobIndex ? "active" : ""}
                       onClick={() => handleTabClick(index)}
-                      data-target={job.organization.split(" ").join("-")}
+                      data-target={job.title.split(" ").join("-")}
                     >
-                      {job.organization} {" ("} {job.title} {")"}
+                      {job.title}
                     </li>
                   ))}
                 </ul>
               </Fade>
-              <div className="content col-sm-8">
+              <div className="content">
                 <h1>
-                  {experienceItems[activeJobIndex].title} @{" "}
-                  {experienceItems[activeJobIndex].organization}
+                  {CertificationItems[activeJobIndex].title} @ {" "}
+                  {CertificationItems[activeJobIndex].date}
                 </h1>
-                <h4>
-                  {experienceItems[activeJobIndex].start_date} -{" "}
-                  {experienceItems[activeJobIndex].end_date}
-                </h4>
-                <Fade damping={0.1} triggerOnce={true}>
-                  <ul>
-                    {experienceItems[activeJobIndex].description.map(
-                      (paragraph, paraIndex) => (
-                        <li className="active" key={paraIndex}>
-                          {paragraph}
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </Fade>
+                <img
+                  src={CertificationItems[activeJobIndex].image}
+                  alt=""
+                  className="myportrait"
+                ></img>
               </div>
             </div>
           </div>
@@ -118,4 +108,4 @@ const WorkExperience = () => {
   );
 };
 
-export default WorkExperience;
+export default Certification;

@@ -3,6 +3,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import WorkExperience from "./components/WorkExperience";
+import Certification from "./components/Certification";
 import SideProjects from "./components/SideProjects";
 import Footer from "./components/Footer";
 import Error404 from "./components/Error404";
@@ -16,7 +17,7 @@ import content from "./content.json";
 // order for that specific component to load in the app.js
 
 function App() {
-  const { about_me, skills, academics, experience, projects } = content;
+  const { about_me, skills, academics, experience, projects, certification } = content;
 
   return (
     <Router>
@@ -29,6 +30,7 @@ function App() {
               {skills.section.enable_section && <Skills />}
               {academics.section.enable_section && <Education />}
               {experience.section.enable_section && <WorkExperience />}
+              {certification.section.enable_section && <Certification />}
               {projects.section.enable_section && <SideProjects />}
               <Footer />
             </div>

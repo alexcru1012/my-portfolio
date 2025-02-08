@@ -914,6 +914,11 @@ li {
   margin-bottom: 1.25rem;
   word-spacing: 0.25rem;
 }
+.content h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+}
 
 .content ul {
   padding-left: 1rem;

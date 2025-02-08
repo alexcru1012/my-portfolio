@@ -70,15 +70,16 @@ import { Fade } from "react-awesome-reveal";
 const Education = () => {
   // Extract the education data from the contentData file
   const education = contentData.academics;
+  const educationItem = education.general;
 
   // Calculate the total credits for each year
-  const totalCreditsPerYear = education.years.map((year) => {
-    return parseFloat(
-      year.courses.reduce((total, course) => {
-        return total + course.credits;
-      }, 0)
-    );
-  });
+  // const totalCreditsPerYear = education.years.map((year) => {
+  //   return parseFloat(
+  //     year.courses.reduce((total, course) => {
+  //       return total + course.credits;
+  //     }, 0)
+  //   );
+  // });
 
   // Render the education section
   return (
@@ -92,49 +93,33 @@ const Education = () => {
                 <h3 className="title-a">
                   {education.section.title}
                 </h3>
-                <p className="subtitle-a">{education.section.description}</p>
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col-sm-12">
-              <div className="row">
-                {education.years.map((year, index) => (
-                  <div className="col-md-6" key={index}>
-                    <Fade
-                      delay={index * 200}
-                      cascade={false}
-                      triggerOnce={true}
-                    >
-                      <div className="education">
-                        <table>
-                          <thead>
-                            <tr>
-                              <th>
-                                {year.semester} {year.year} Courses
-                              </th>
-                              <th>
-                                Total Credits:{" "}
-                                {totalCreditsPerYear[index].toFixed(1)}
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {year.courses.map((course, index) => (
-                              <tr key={index}>
-                                <td data-tooltip={course.abbreviation}>
-                                  {course.name}
-                                </td>
-                                <td>{course.credits.toFixed(1)}</td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </Fade>
-                  </div>
-                ))}
-              </div>
+        </div>
+
+        <div className="col-sm-12">
+          <div className="wrapper">
+            <div className="content">
+              <h1>
+                {educationItem.school} @{" "}
+                {educationItem.degree}
+              </h1>
+              <h4>
+                {educationItem.start_date} -{" "}
+                {educationItem.end_date}
+              </h4>
+              <Fade damping={0.1} triggerOnce={true}>
+                <ul>
+                  {educationItem.description.map(
+                    (paragraph, paraIndex) => (
+                      <li className="active" key={paraIndex}>
+                        {paragraph}
+                      </li>
+                    )
+                  )}
+                </ul>
+              </Fade>
             </div>
           </div>
         </div>
